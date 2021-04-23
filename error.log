@@ -40,3 +40,4 @@ selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome fa
   (The process started from chrome location /usr/bin/chromium-browser is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
 
 [0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m

@@ -137,6 +137,8 @@ destination_box = driver.find_element_by_id('timepicker_departure')
 destination_box.send_keys('06:00 PM')
 driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
 time.sleep(1)
+driver.find_elements_by_class_name('action-next')[3].click()
+time.sleep(1)
 done_buttons[1].click()
 
 # Remove timepicker from view
