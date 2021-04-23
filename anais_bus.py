@@ -164,6 +164,8 @@ time.sleep(5)
 # Confirm and close
 try:
     confirm = driver.find_element_by_id('alert_message_cnf')
+    confirm_button = driver.find_element_by_xpath('//div[@class="alertMessageConf"]//button')
+    confirm_button.click()
     print(confirm.text.split(' ', 1)[0] + ' ' + email)
 except NoSuchElementException:
     print('fail :( ' + email)
