@@ -26,7 +26,7 @@ def initDriver(headless = False):
     # Handle driver loading
     return(driver)
 
-# def pwd_generator(size=8, chars=string.ascii_letters + string.digits + '!@#$%^&*()_'):
+# def pwd_generator(size=8, chars=string.ascii_letters +#!/usr/bin/python string.digits + '!@#$%^&*()_'):
 #     return ''.join(random.choice(chars) for _ in range(size))å
 
 def gen_pwd(size=8):
@@ -91,6 +91,9 @@ def switchVpn(country = 'USA'):
     os.system('expressvpn disconnect')
     os.system(f'expressvpn connect {code}')
     print(f'VPN connected to code {code}')
+
+# Change root path (important for cron run)
+os.chdir('/home/pi/anais-bus')
 
 # Log init datetime
 now = datetime.datetime.now()
@@ -167,7 +170,7 @@ try:
     confirm = driver.find_element_by_id('alert_message_cnf')
     confirm_button = driver.find_element_by_xpath('//div[@class="alertMessageConf"]//button')
     confirm_button.click()
-    print(confirm.text.split(' ', 1)[0] + ' ' + email)
+    print('Success!', email)
 except NoSuchElementException:
     print('fail :( ' + email)
 
