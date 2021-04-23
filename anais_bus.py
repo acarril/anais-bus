@@ -16,7 +16,7 @@ def initDriver(headless = False):
 
     # Insatiate webdriver
     driver = webdriver.Chrome(options = chrome_options)
-    driver.set_page_load_timeout(10)
+    driver.set_page_load_timeout(30)
 
     # Handle driver loading
     return(driver)
