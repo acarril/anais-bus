@@ -2,6 +2,9 @@ import string
 import random
 import urllib
 import time
+import subprocess
+import re
+import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
@@ -60,11 +63,38 @@ def gen_email():
     email += '@gmail.com'
     return email
 
+def countFun(fun):
+    '''Count number of times a function is called'''
+    def wrapper(*args, **kwargs):
+        wrapper.counter += 1    # executed every time the wrapped function is called
+        return fun(*args, **kwargs)
+    wrapper.counter = 0         # executed only once in decorator definition time
+    return wrapper
 
-# Init driver
-url = 'https://www.ourbus.com/invitation/OBBQDQJM/438102'
+@countFun # globally count number of times run to index vpn_codes
+def switchVpn(country = 'USA'):
+    '''Switch VPN connection, exhausting list of country codes'''
+    # Fetch country codes
+    def getVpnCountryCodes(country = None):
+        process = subprocess.Popen('expressvpn list all'.split(), stdout = subprocess.PIPE)
+        stdout = str(process.communicate()[0], 'utf-8')
+        if country == None:
+            countryCodes = re.findall(fr"^([^ \t]+).*", stdout, re.MULTILINE)
+        else:
+            countryCodes = re.findall(fr"^us[^\s]+", stdout, re.MULTILINE)
+        return(countryCodes)
+    
+    vpn_codes = getVpnCountryCodes(country = 'USA')
+    code = random.choice(vpn_codes)
+    os.system('expressvpn disconnect')
+    os.system(f'expressvpn connect {code}')
+    print(f'VPN connected to code {code}')
+
+# Init driver and VPN connection
+switchVpn(country = 'USA')
 driver = initDriver()
 
+url = 'https://www.ourbus.com/invitation/OBBQDQJM/438102'
 driver.get(url)
 
 # Origin
@@ -129,6 +159,7 @@ try:
 except NoSuchElementException:
     print('fail :( ' + email)
 
+os.system('expressvpn disconnect')
 driver.close()
 
 
