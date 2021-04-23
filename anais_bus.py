@@ -2,6 +2,7 @@ import string
 import random
 import urllib
 import time
+import datetime
 import subprocess
 import re
 import os
@@ -90,12 +91,20 @@ def switchVpn(country = 'USA'):
     os.system(f'expressvpn connect {code}')
     print(f'VPN connected to code {code}')
 
+# Log init datetime
+now = datetime.datetime.now()
+print('-'*40, '\n', now.strftime('%Y-%m-%d %H:%M:%S'))
+
 # Init driver and VPN connection
 switchVpn(country = 'USA')
 driver = initDriver()
 
 url = 'https://www.ourbus.com/invitation/OBBQDQJM/438102'
 driver.get(url)
+
+# People needed
+pop_needed = driver.find_element_by_id('pop_needed')
+print('People to goal:', pop_needed.text)
 
 # Origin
 origin_box = driver.find_element_by_id('source')
