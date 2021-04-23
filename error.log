@@ -20,3 +20,23 @@ selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome fa
   (chrome not reachable)
   (The process started from chrome location /usr/bin/chromium-browser is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
 
+Traceback (most recent call last):
+  File "/home/pi/anais-bus/anais_bus.py", line 104, in <module>
+    driver = initDriver()
+  File "/home/pi/anais-bus/anais_bus.py", line 23, in initDriver
+    driver = webdriver.Chrome(options = chrome_options)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/chrome/webdriver.py", line 81, in __init__
+    desired_capabilities=desired_capabilities)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome failed to start: exited abnormally.
+  (chrome not reachable)
+  (The process started from chrome location /usr/bin/chromium-browser is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+
+[0;31;49mDisconnected.[0m
