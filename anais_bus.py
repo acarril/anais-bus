@@ -26,7 +26,7 @@ def initDriver(headless = False):
     # Handle driver loading
     return(driver)
 
-# def pwd_generator(size=8, chars=string.ascii_letters +#!/usr/bin/python string.digits + '!@#$%^&*()_'):
+# def pwd_generator(size=8, chars=string.ascii_letters + string.digits + '!@#$%^&*()_'):
 #     return ''.join(random.choice(chars) for _ in range(size))å
 
 def gen_pwd(size=8):
