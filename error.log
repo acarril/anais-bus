@@ -41,3 +41,109 @@ selenium.common.exceptions.WebDriverException: Message: unknown error: Chrome fa
 
 [0;31;49mDisconnected.[0m
 [0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+Traceback (most recent call last):
+  File "/home/pi/anais-bus/anais_bus.py", line 107, in <module>
+    driver.get(url)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 29.183
+  (Session info: chrome=88.0.4324.187)
+
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+Traceback (most recent call last):
+  File "/home/pi/anais-bus/anais_bus.py", line 107, in <module>
+    driver.get(url)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 23.779
+  (Session info: chrome=88.0.4324.187)
+
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+Traceback (most recent call last):
+  File "/home/pi/anais-bus/anais_bus.py", line 107, in <module>
+    driver.get(url)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout: Timed out receiving message from renderer: 29.162
+  (Session info: chrome=88.0.4324.187)
+
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+[0;31;49mDisconnected.[0m
+Traceback (most recent call last):
+  File "/home/pi/anais-bus/anais_bus.py", line 110, in <module>
+    pop_needed = driver.find_element_by_id('pop_needed')
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 360, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="pop_needed"]"}
+  (Session info: chrome=88.0.4324.187)
+
